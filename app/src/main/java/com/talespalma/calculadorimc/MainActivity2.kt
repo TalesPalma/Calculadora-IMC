@@ -1,8 +1,10 @@
 package com.talespalma.calculadorimc
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.annotation.ColorInt
 
 
 class MainActivity2 : AppCompatActivity() {
@@ -33,12 +35,31 @@ class MainActivity2 : AppCompatActivity() {
         textImc.setText(" O seu imc é ${calculo.toString()}")
 
         when {
-            calculo <= 18.5 -> textResult.setText("Abaixo do peso")
-            calculo > 18.5 && calculo <= 24.9 -> textResult.setText("Peso normal")
-            calculo >= 25 && calculo <= 29.9 -> textResult.setText("Sobrepeso")
-            calculo >= 30 && calculo <= 34 -> textResult.setText("Obesidade grau 1")
-            calculo >= 35 && calculo <= 39.9 -> textResult.setText("Obesidade grau 2")
-            calculo > 40 -> textResult.setText("Obesidade grau 3")
+            calculo <= 18.5 -> {
+                textResult.setText("Abaixo do peso")
+                textResult.setTextColor(Color.RED)
+            }
+            calculo > 18.5 && calculo <= 24.9 -> {
+                textResult.setText("Peso normal")
+                textResult.setTextColor(Color.GREEN)
+            }
+            calculo >= 25 && calculo <= 29.9 -> {
+                textResult.setText("Sobrepeso")
+                textResult.setTextColor(Color.parseColor("#FF8400"))
+            }
+            calculo >= 30 && calculo <= 34 -> {
+                textResult.setText("Obesidade grau 1")
+                textResult.setTextColor(Color.RED)
+            }
+            calculo >= 35 && calculo <= 39.9 -> {
+                textResult.setText("Obesidade grau 2")
+                textResult.setTextColor(Color.RED)
+            }
+            calculo > 40 -> {
+                textResult.setText("Obesidade grau 3")
+                textResult.setTextColor(Color.RED)
+
+            }
         }
 
 
