@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CalculadorIMC" parent="Theme.Material3.DayNight.NoActionBar">
+         <item name="colorPrimary">@color/primary</item>
+         <item name="colorPrimaryVariant">@color/primaryVariance</item>
+        <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.CalculadorIMC" parent="Base.Theme.CalculadorIMC" />
+</resources>
