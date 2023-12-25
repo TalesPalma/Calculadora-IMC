@@ -39,22 +39,27 @@ class MainActivity2 : AppCompatActivity() {
                 textResult.setText("Abaixo do peso")
                 textResult.setTextColor(Color.RED)
             }
-            calculo > 18.5 && calculo <= 24.9 -> {
+
+            calculo in 18.5 .. 24.9 -> {
                 textResult.setText("Peso normal")
                 textResult.setTextColor(Color.GREEN)
             }
-            calculo >= 25 && calculo <= 29.9 -> {
+
+            calculo in 25.00 .. 29.9 -> {
                 textResult.setText("Sobrepeso")
                 textResult.setTextColor(Color.parseColor("#FF8400"))
             }
-            calculo >= 30 && calculo <= 34 -> {
+
+            calculo in 30F.. 34F-> {
                 textResult.setText("Obesidade grau 1")
                 textResult.setTextColor(Color.RED)
             }
-            calculo >= 35 && calculo <= 39.9 -> {
+
+            calculo in 35.00 .. 39.9 -> {
                 textResult.setText("Obesidade grau 2")
                 textResult.setTextColor(Color.RED)
             }
+
             calculo > 40 -> {
                 textResult.setText("Obesidade grau 3")
                 textResult.setTextColor(Color.RED)
@@ -62,6 +67,7 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
+        
 
     }
 }
